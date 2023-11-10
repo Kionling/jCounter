@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS jobDB;
+CREATE DATABASE jobDB;
+USE jobDB; 
+
+CREATE TABLE user(
+    id AUTO_INCREMENT INT NOT NULL, 
+    name VARCHAR(100),
+    password VARCHAR(100),
+    email VARCHAR(200),
+    PRIMARY KEY(id)
+);
+
