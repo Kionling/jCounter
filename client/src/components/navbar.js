@@ -1,7 +1,8 @@
 import React from "react";
 
 function Navbar() {
-  <div>
+  return(
+    <div>
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
@@ -20,7 +21,8 @@ function Navbar() {
         </ul>
       </div>
     </nav>
-  </div>;
+  </div>
+  )
 }
 
 export default Navbar; 

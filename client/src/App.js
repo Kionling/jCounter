@@ -1,22 +1,21 @@
-import logo from './logo.svg';
-import React, { useRef } from 'react';
 
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/navbar';
 import Home from "./pages/home"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-   <Router>
-    <div>
-      <Navbar/>
+   <div>
+    
+    <Router>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+      <Route exact path='*' element={<Home/>}/>
       </Routes>
-    </div>
-   </Router>
+    </Router>
+   </div>
   );
 }
 
