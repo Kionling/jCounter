@@ -11,6 +11,7 @@ function App() {
    <div>
     
     <Router>
+      <Navbar/>
       <Routes>
       <Route exact path='*' element={<Home/>}/>
       </Routes>
