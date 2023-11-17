@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
-
+import API from "../API/api"
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -8,6 +8,7 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle login logic here
+
     console.log('Logging in with:', username, password);
   };
 
