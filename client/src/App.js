@@ -10,7 +10,13 @@ import CreateAccount from './pages/createAccount';
 function App() {
   return (
    <div>
-    <CreateAccount/>
+    <Router>
+      <Routes>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='*' element={<Home/>}/>
+        <Route path='/createAccount' element={<CreateAccount/>}/>
+      </Routes>
+    </Router>
    </div>
   );
 }
