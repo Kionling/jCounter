@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
-
+import { Link } from 'react-router-dom';
 function CreateAccount() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -62,6 +62,9 @@ function CreateAccount() {
           </div>
           <div className="card-action">
             <button type="submit" className="btn waves-effect waves-light">Create Account</button>
+          </div>
+          <div className=''>
+            {/* <Link to="/login">Have an account?</Link> */}
           </div>
         </div>
       </form>

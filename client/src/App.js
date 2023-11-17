@@ -5,11 +5,12 @@ import './App.css';
 import Navbar from './components/navbar';
 import Home from "./pages/home"
 import Login from "../src/pages/login"
+import CreateAccount from './pages/createAccount';
 
 function App() {
   return (
    <div>
-    <Login/>
+    <CreateAccount/>
    </div>
   );
 }
