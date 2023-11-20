@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function NotFound() {
     const navigate = useNavigate();
-    const [countdown, setCountdown] = useState(5);
+    const [countdown, setCountdown] = useState(3);
 
     useEffect(() => {
         const timer = setInterval(() => {

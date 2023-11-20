@@ -85,6 +85,27 @@ function Home() {
     setApplicationsSentCount(applicationsSentCount - 1);
   };
 
+  useEffect(() => {
+    if(hiredCount < 0){
+      window.alert("You cannot have a negative number");
+      setHiredCount(hiredCount + 1);
+    }
+    if(declinedCount < 0){
+      window.alert("You cannot have a negative number");
+      setDeclinedCount(declinedCount + 1);
+    }
+    if(noAnswerCount < 0){
+      window.alert("You cannot have a negative number");
+      setNoAnswerCount(noAnswerCount + 1);
+    }
+    if(applicationsSentCount < 0){
+      window.alert("You cannot have a negative number");
+      setApplicationsSentCount(applicationsSentCount + 1);
+    }
+  }, [hiredCount, declinedCount, noAnswerCount, applicationsSentCount]); // If hiredCount is a dependency, it can cause a loop
+  
+
+  
   const totalCount = hiredCount + declinedCount + noAnswerCount;
 
   return (
