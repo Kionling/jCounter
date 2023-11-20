@@ -86,26 +86,24 @@ function Home() {
   };
 
   useEffect(() => {
-    if(hiredCount < 0){
+    if (hiredCount < 0) {
       window.alert("You cannot have a negative number");
       setHiredCount(hiredCount + 1);
     }
-    if(declinedCount < 0){
+    if (declinedCount < 0) {
       window.alert("You cannot have a negative number");
       setDeclinedCount(declinedCount + 1);
     }
-    if(noAnswerCount < 0){
+    if (noAnswerCount < 0) {
       window.alert("You cannot have a negative number");
       setNoAnswerCount(noAnswerCount + 1);
     }
-    if(applicationsSentCount < 0){
+    if (applicationsSentCount < 0) {
       window.alert("You cannot have a negative number");
       setApplicationsSentCount(applicationsSentCount + 1);
     }
   }, [hiredCount, declinedCount, noAnswerCount, applicationsSentCount]); // If hiredCount is a dependency, it can cause a loop
-  
 
-  
   const totalCount = hiredCount + declinedCount + noAnswerCount;
 
   return (
@@ -120,32 +118,50 @@ function Home() {
       </div>
       <div className="row">
         <div className="col s3">
-        <h2 className="franklin bold">Hired</h2>
-        <button className="btn" onClick={handleHiredClick}>+1</button>
-        <button className="btn" onClick={handleHiredClickSubtract}>-1</button>
+          <h2 className="franklin bold">Hired</h2>
+          <button className="btn" onClick={handleHiredClick}>
+            +1
+          </button>
+          <button className="btn" onClick={handleHiredClickSubtract}>
+            -1
+          </button>
         </div>
         <div className="col s3">
-            <h2 className="franklin bold">Declined</h2>
-        <button className="btn" onClick={handleDeclinedClick}>+1</button>
-        <button className="btn" onClick={handleDeclinedClickSubtract}>-1</button>
+          <h2 className="franklin bold">Declined</h2>
+          <button className="btn" onClick={handleDeclinedClick}>
+            +1
+          </button>
+          <button className="btn" onClick={handleDeclinedClickSubtract}>
+            -1
+          </button>
         </div>
         <div className="col s3">
-        <h2 className="franklin bold">No Answer</h2>
-        <button className="btn" onClick={handleNoAnswerClick}>+1</button>
-        <button className="btn" onClick={handleNoAnswerClickSubtract}>-1</button>   
-        </div> 
-        <div className="col s3">
-        <h3 className="franklin bold">Applications Sent</h3>
-        <button className="btn" onClick={handleApplicationsSentClick}>+1</button>
-        <button className="btn" onClick={handleApplicationsSentClickSubtract}>-1</button>   
+          <h2 className="franklin bold">No Answer</h2>
+          <button className="btn" onClick={handleNoAnswerClick}>
+            +1
+          </button>
+          <button className="btn" onClick={handleNoAnswerClickSubtract}>
+            -1
+          </button>
         </div>
-        <button onClick={handleResetClick} className="reset-button btn">Reset</button>
+        <div className="col s3">
+          <h3 className="franklin bold">Applications Sent</h3>
+          <button className="btn" onClick={handleApplicationsSentClick}>
+            +1
+          </button>
+          <button className="btn" onClick={handleApplicationsSentClickSubtract}>
+            -1
+          </button>
+        </div>
+        <button onClick={handleResetClick} className="reset-button btn">
+          Reset
+        </button>
       </div>
       <div>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
             data={[
-              { name: "Hired", count: hiredCount }, // { name: "Hired", count: 5 }              
+              { name: "Hired", count: hiredCount }, // { name: "Hired", count: 5 }
               { name: "Declined", count: declinedCount },
               { name: "No Answer", count: noAnswerCount },
               { name: "Applications Sent", count: applicationsSentCount },
