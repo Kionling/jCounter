@@ -14,10 +14,7 @@ import {
     ResponsiveContainer,
   } from 'recharts';
   
-
-
-    
-
+  
 function Home() {
     const [hiredCount, setHiredCount] = useState(0);
     const [declinedCount, setDeclinedCount] = useState(0);
@@ -79,7 +76,7 @@ function Home() {
     const totalCount = hiredCount + declinedCount + noAnswerCount;
 
     return (
-        <div className="container ">
+        <div className="container">
             <div>
                 <h2>Job Counter</h2>
                 <p>Hired: {hiredCount}</p>
@@ -94,6 +91,25 @@ function Home() {
                 <button onClick={handleNoAnswerClick}>No Answer</button>
                 <button onClick={handleApplicationsSentClick}>Applications Sent</button>
                 <button onClick={handleResetClick}>Reset</button>
+            </div>
+            <div>
+                <ResponsiveContainer width="100%" height={300}>
+                    <BarChart
+                        data={[
+                            { name: "Hired", count: hiredCount },
+                            { name: "Declined", count: declinedCount },
+                            { name: "No Answer", count: noAnswerCount },
+                            { name: "Applications Sent", count: applicationsSentCount },
+                        ]}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="count" fill="#8884d8" />
+                    </BarChart>
+                </ResponsiveContainer>
             </div>
         </div>
     );
