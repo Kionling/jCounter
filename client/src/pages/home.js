@@ -1,7 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, PureComponent } from "react";
 import "../pages/home.css";
 import "../pages/home.css";
-
+import {
+    BarChart,
+    Bar,
+    Cell,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+    LabelList,
+    ResponsiveContainer,
+  } from 'recharts';
+  
 
 
     
