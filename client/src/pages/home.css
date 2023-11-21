@@ -11,3 +11,12 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+
+body{
+    background-image: url(../pages/Assets/backDrop.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;    
+}

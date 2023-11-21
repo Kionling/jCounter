@@ -107,7 +107,7 @@ function Home() {
   const totalCount = hiredCount + declinedCount + noAnswerCount;
 
   return (
-    <div className="">
+    <div className="" id="background">
       <div className="container row">
         <div id="chart-section" className="col s12 m12">
           <ResponsiveContainer width="100%" height={300}>
@@ -129,8 +129,8 @@ function Home() {
           </ResponsiveContainer>
         </div>
       </div>
-      <div id="data-row" className="row container">
-        <div className="col s12 m3">
+      <div id="data-row" className="row container center">
+        <div className="col s12 m4">
           <h2 className="franklin bold">Job Counter</h2>
           <p>Hired: {hiredCount}</p>
           <p>Declined: {declinedCount}</p>
@@ -139,7 +139,7 @@ function Home() {
           <p>Total: {totalCount}</p>
         </div>
 
-        <div className="col s12 m6">
+        <div className="col s12 m6 container ">
           <div className="col m3">
             <h4 className="franklin bold">Hired</h4>
             <button className="btn" onClick={handleHiredClick}>
@@ -188,7 +188,9 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+
+      </div>
+    
   );
 }
 

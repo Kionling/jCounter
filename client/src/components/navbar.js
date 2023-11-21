@@ -1,24 +1,14 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import "./navBar.css";
 function Navbar() {
   return(
     <div>
     <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
+      <div class="nav-wrapper #37474f blue-grey darken-3 ">
+        <Link to="/" className="brand-logo center">
           Job Application Counter
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <a href="sass.html">Sass</a>
-          </li>
-          <li>
-            <a href="badges.html">Components</a>
-          </li>
-          <li>
-            <a href="collapsible.html">JavaScript</a>
-          </li>
-        </ul>
+        </Link>
       </div>
     </nav>
   </div>

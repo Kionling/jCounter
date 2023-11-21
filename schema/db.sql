@@ -3,12 +3,9 @@ CREATE DATABASE jobDB;
 USE jobDB; 
 
 CREATE TABLE user(
-    id AUTO_INCREMENT INT NOT NULL, 
+    id INT AUTO_INCREMENT NOT NULL, 
     name VARCHAR(100),
     password VARCHAR(100),
     email VARCHAR(200),
     PRIMARY KEY(id)
 );
-
-
-
