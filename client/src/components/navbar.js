@@ -5,8 +5,8 @@ function Navbar() {
   return(
     <div>
     <nav>
-      <div class="nav-wrapper #37474f blue-grey darken-3 ">
-        <Link to="/" className="brand-logo center">
+      <div class="nav-wrapper #000000 black">
+        <Link to="/" className="brand-logo center franklin">
           Job Application Counter
         </Link>
       </div>

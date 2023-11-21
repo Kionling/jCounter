@@ -1,6 +1,5 @@
 import React, { useState, useEffect, PureComponent } from "react";
 import "../pages/home.css";
-import "../pages/home.css";
 import {
   BarChart,
   Bar,
@@ -105,9 +104,9 @@ function Home() {
   }, [hiredCount, declinedCount, noAnswerCount, applicationsSentCount]); // If hiredCount is a dependency, it can cause a loop
 
   const totalCount = hiredCount + declinedCount + noAnswerCount;
-
+  
   return (
-    <div className="" id="background">
+    <div className="white-text" id="background">
       <div className="container row">
         <div id="chart-section" className="col s12 m12">
           <ResponsiveContainer width="100%" height={300}>
@@ -139,7 +138,7 @@ function Home() {
           <p>Total: {totalCount}</p>
         </div>
 
-        <div className="col s12 m6 container ">
+        <div className="col s12 m5 container ">
           <div className="col m3">
             <h4 className="franklin bold">Hired</h4>
             <button className="btn" onClick={handleHiredClick}>
@@ -159,7 +158,7 @@ function Home() {
             </button>
           </div>
           <div className="col m3">
-            <h4 className="franklin bold">No Answer</h4>
+            <h5 className="franklin bold">No Answer</h5>
             <button className="btn" onClick={handleNoAnswerClick}>
               +1
             </button>
@@ -168,7 +167,7 @@ function Home() {
             </button>
           </div>
           <div className="col m3">
-            <h4 className="franklin bold">Applications Sent</h4>
+            <h5 className="franklin bold">Applications Sent</h5>
             <button className="btn" onClick={handleApplicationsSentClick}>
               +1
             </button>
@@ -180,7 +179,7 @@ function Home() {
             </button>
           </div>
           <div className="row">
-            <div className="col s12 m12">
+            <div className="col s12 l6">
               <button onClick={handleResetClick} className="reset-button btn">
                 Reset
               </button>
@@ -188,9 +187,7 @@ function Home() {
           </div>
         </div>
       </div>
-
-      </div>
-    
+    </div>
   );
 }
 
