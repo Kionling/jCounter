@@ -108,87 +108,86 @@ function Home() {
 
   return (
     <div className="">
-        <div className="container row">
-            <div id="chart-section" className="col s12 m12">
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart
-            data={[
-              { name: "Hired", count: hiredCount }, // { name: "Hired", count: 5 }
-              { name: "Declined", count: declinedCount },
-              { name: "No Answer", count: noAnswerCount },
-              { name: "Applications Sent", count: applicationsSentCount },
-            ]}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="count" fill="#8884d8" />
-          </BarChart>
-        </ResponsiveContainer>
-
-      </div>
+      <div className="container row">
+        <div id="chart-section" className="col s12 m12">
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart
+              data={[
+                { name: "Hired", count: hiredCount }, // { name: "Hired", count: 5 }
+                { name: "Declined", count: declinedCount },
+                { name: "No Answer", count: noAnswerCount },
+                { name: "Applications Sent", count: applicationsSentCount },
+              ]}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="count" fill="#8884d8" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
-        <div id="data-row" className="row container">
-      <div className="col s12 m3">
-        <h2 className="franklin bold">Job Counter</h2>
-        <p>Hired: {hiredCount}</p>
-        <p>Declined: {declinedCount}</p>
-        <p>No Answer: {noAnswerCount}</p>
-        <p>Applications Sent: {applicationsSentCount}</p>
-        <p>Total: {totalCount}</p>
       </div>
-
-
+      <div id="data-row" className="row container">
+        <div className="col s12 m3">
+          <h2 className="franklin bold">Job Counter</h2>
+          <p>Hired: {hiredCount}</p>
+          <p>Declined: {declinedCount}</p>
+          <p>No Answer: {noAnswerCount}</p>
+          <p>Applications Sent: {applicationsSentCount}</p>
+          <p>Total: {totalCount}</p>
+        </div>
 
         <div className="col s12 m6">
-        <div className="col m3">
-          <h4 className="franklin bold">Hired</h4>
-          <button className="btn" onClick={handleHiredClick}>
-            +1
-          </button>
-          <button className="btn" onClick={handleHiredClickSubtract}>
-            -1
-          </button>
-        </div>
-        <div className="col m3">
-          <h4 className="franklin bold">Declined</h4>
-          <button className="btn" onClick={handleDeclinedClick}>
-            +1
-          </button>
-          <button className="btn" onClick={handleDeclinedClickSubtract}>
-            -1
-          </button>
-        </div>
-        <div className="col m3">
-          <h4 className="franklin bold">No Answer</h4>
-          <button className="btn" onClick={handleNoAnswerClick}>
-            +1
-          </button>
-          <button className="btn" onClick={handleNoAnswerClickSubtract}>
-            -1
-          </button>
-        </div>
-        <div className="col m3">
-          <h4 className="franklin bold">Applications Sent</h4>
-          <button className="btn" onClick={handleApplicationsSentClick}>
-            +1
-          </button>
-          <button className="btn" onClick={handleApplicationsSentClickSubtract}>
-            -1
-          </button>
-        </div>
-        <div className="row">
+          <div className="col m3">
+            <h4 className="franklin bold">Hired</h4>
+            <button className="btn" onClick={handleHiredClick}>
+              +1
+            </button>
+            <button className="btn" onClick={handleHiredClickSubtract}>
+              -1
+            </button>
+          </div>
+          <div className="col m3">
+            <h4 className="franklin bold">Declined</h4>
+            <button className="btn" onClick={handleDeclinedClick}>
+              +1
+            </button>
+            <button className="btn" onClick={handleDeclinedClickSubtract}>
+              -1
+            </button>
+          </div>
+          <div className="col m3">
+            <h4 className="franklin bold">No Answer</h4>
+            <button className="btn" onClick={handleNoAnswerClick}>
+              +1
+            </button>
+            <button className="btn" onClick={handleNoAnswerClickSubtract}>
+              -1
+            </button>
+          </div>
+          <div className="col m3">
+            <h4 className="franklin bold">Applications Sent</h4>
+            <button className="btn" onClick={handleApplicationsSentClick}>
+              +1
+            </button>
+            <button
+              className="btn"
+              onClick={handleApplicationsSentClickSubtract}
+            >
+              -1
+            </button>
+          </div>
+          <div className="row">
             <div className="col s12 m12">
-        <button onClick={handleResetClick} className="reset-button btn">
-          Reset
-        </button>
-        </div>  
+              <button onClick={handleResetClick} className="reset-button btn">
+                Reset
+              </button>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-      
+      </div>
     </div>
   );
 }
